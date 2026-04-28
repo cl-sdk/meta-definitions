@@ -41,9 +41,9 @@ Meta is library to create infinite types and derivations.
 ;;                :type local-time:timestamp)
 ;;    (deleted-at :type (or local-time:timestamp null))))
 
-(meta:derive-readers user)
-(meta:derive-equality user)
-(meta:derive-print-object user)
+(meta-definitions.derive.readers:derive-readers user)
+(meta-definitions.derive.equality:derive-equality user)
+(meta-definitions.derive.print-object:derive-print-object user)
 
 ;; create a input type create user 
 
@@ -54,8 +54,8 @@ Meta is library to create infinite types and derivations.
 ;; (defclass create-user ()
 ;;   ((name :type string)))
 
-(meta:derive-readers create-user)
-(meta:derive-print-object create-user)
+(meta-definitions.derive.readers:derive-readers create-user)
+(meta-definitions.derive.print-object:derive-print-object create-user)
 (derive-validation create-user)
 ```
 
