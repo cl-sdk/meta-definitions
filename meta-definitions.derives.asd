@@ -3,8 +3,6 @@
 (asdf:defsystem #:meta-definitions.derives
   :license "Unlicense"
   :author "Bruno Dias"
-  :serial t
-  :depends-on (#:meta-definitions #:uiop)
-  :components ((:file "derive/readers")
-               (:file "derive/print-object")
-               (:file "derive/equality")))
+  :depends-on (#:meta-definitions.derive.readers
+               #:meta-definitions.derive.print-object
+               #:meta-definitions.derive.equality))
